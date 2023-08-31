@@ -657,7 +657,7 @@ function addTheIcedWord(){
 
 
 let heroku = 'https://coffee-trainer.herokuapp.com/api/coredrinks'
-let local = 'https://williampos.netlify.app///api/coredrinks'
+let local = 'https://williampos.netlify.app/api/coredrinks'
 
 const statusLight = document.querySelector('.statusLight')
 async function apiRequest(url){  //Calls the API and brings drink data to the 
@@ -705,7 +705,7 @@ function shuffle(array) {
 
 async function allcustom(){
     try{
-        const response = await fetch('https://williampos.netlify.app///api/allnames')
+        const response = await fetch('https://williampos.netlify.app/api/allnames')
         const data = await response.json()
         console.log(data)
     }
@@ -1421,13 +1421,13 @@ function dynamicURL(word){
 }
 dynamicURL()
 if(production === 'dev'){
-    localStorage.setItem('LastClicked',["https://williampos.netlify.app///api/customizations",local,'https://williampos.netlify.app///api/customers','https://williampos.netlify.app///order'])
+    localStorage.setItem('LastClicked',["https://williampos.netlify.app/api/customizations",local,'https://williampos.netlify.app/api/customers','https://williampos.netlify.app/order'])
     removeAllChildNodes(document.querySelector('.items'))
     removeAllChildNodes(document.querySelector('.drinkType'))
-    apiRequestForCustomizations("https://williampos.netlify.app///api/customizations")
+    apiRequestForCustomizations("https://williampos.netlify.app/api/customizations")
     apiRequest(local)
-    apiRequestCustomer('https://williampos.netlify.app///api/customers')
-    postUrl ='https://williampos.netlify.app///order'
+    apiRequestCustomer('https://williampos.netlify.app/api/customers')
+    postUrl ='https://williampos.netlify.app/order'
 }else
 if(production=== 'live'){
     localStorage.setItem('LastClicked',["https://coffee-trainer.herokuapp.com/api/customizations",heroku,"https://coffee-trainer.herokuapp.com/api/customers,'https://coffee-trainer.herokuapp.com/order'"])
