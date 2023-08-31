@@ -16,7 +16,7 @@ function nameShortener(name){
 }
 
 let heroku = 'https://coffee-trainer.herokuapp.com/api/coredrinks'
-let local = 'https://williampos.netlify.app//api/coredrinks'
+let local = 'https://williampos.netlify.app///api/coredrinks'
 async function apiRequest(){
     
     try{
