@@ -1421,7 +1421,7 @@ function dynamicURL(word){
 }
 dynamicURL()
 if(production === 'dev'){
-    localStorage.setItem('LastClicked',["https://williampos.netlify.app/api/customizations",local,'https://williampos.netlify.app/api/customers','https://localhost:8000/order'])
+    localStorage.setItem('LastClicked',["https://williampos.netlify.app/api/customizations",local,'https://williampos.netlify.app/api/customers','https://williampos.netlify.app/order'])
     removeAllChildNodes(document.querySelector('.items'))
     removeAllChildNodes(document.querySelector('.drinkType'))
     apiRequestForCustomizations("https://williampos.netlify.app/api/customizations")
